@@ -1,13 +1,13 @@
-# decimal.js.macro
-[![Build Status](https://img.shields.io/circleci/project/github/gtkatakura/decimal.js.macro/master.svg?label=build)](https://circleci.com/gh/gtkatakura/decimal.js.macro)
-[![npm version](https://badge.fury.io/js/decimal.js.macro.svg)](https://badge.fury.io/js/decimal.js.macro)
-[![MIT License](https://img.shields.io/npm/l/decimal.js.macro.svg)](https://github.com/gtkatakura/decimal.js.macro/blob/master/LICENSE.md)
+# decimal.js-light.macro
+[![Build Status](https://img.shields.io/circleci/project/github/gtkatakura/decimal.js-light.macro/master.svg?label=build)](https://circleci.com/gh/gtkatakura/decimal.js-light.macro)
+[![npm version](https://badge.fury.io/js/decimal.js-light.macro.svg)](https://badge.fury.io/js/decimal.js-light.macro)
+[![MIT License](https://img.shields.io/npm/l/decimal.js-light.macro.svg)](https://github.com/gtkatakura/decimal.js-light.macro/blob/master/LICENSE.md)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Usage
 
 ```js
-import decimal from 'decimal.js.macro'
+import decimal from 'decimal.js-light.macro'
 
 const a = decimal(1)
 const b = decimal(a - 3 * 4 / 5)
@@ -16,7 +16,7 @@ const d = decimal(1 ** 2 ** 3)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { Decimal as _Decimal } from 'decimal.js';
+import { Decimal as _Decimal } from 'decimal.js-light';
 
 
 const a = _Decimal('1');
@@ -31,7 +31,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/8618687?v=4" width="100px;"/><br /><sub><b>gtkatakura</b></sub>](https://github.com/gtkatakura)<br />[💻](https://github.com/gtkatakura/decimal.js.macro/commits?author=gtkatakura "Code") [🤔](#ideas-gtkatakura "Ideas, Planning, & Feedback") [⚠️](https://github.com/gtkatakura/decimal.js.macro/commits?author=gtkatakura "Tests") |
+| [<img src="https://avatars0.githubusercontent.com/u/8618687?v=4" width="100px;"/><br /><sub><b>gtkatakura</b></sub>](https://github.com/gtkatakura)<br />[💻](https://github.com/gtkatakura/decimal.js-light.macro/commits?author=gtkatakura "Code") [🤔](#ideas-gtkatakura "Ideas, Planning, & Feedback") [⚠️](https://github.com/gtkatakura/decimal.js-light.macro/commits?author=gtkatakura "Tests") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

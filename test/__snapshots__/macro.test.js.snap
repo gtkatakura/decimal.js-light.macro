@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros 1. macros: 1. macros 1`] = `
+"
+import decimal from '../src/macro'
+
+const a = decimal(1)
+const b = decimal(a)
+const c = decimal(-1)
+const d = decimal(-c)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { Decimal as _Decimal } from 'decimal.js-light';
+
+
+const a = _Decimal('1');
+const b = _Decimal(a);
+const c = _Decimal(_Decimal('1').neg());
+const d = _Decimal(_Decimal(c).neg());
+"
+`;
+
+exports[`macros 2. macros: 2. macros 1`] = `
+"
+import decimal from '../src/macro'
+
+const a = decimal(1)
+const c = decimal(b - 3)
+const d = decimal(c * 4)
+const e = decimal(d / 5)
+const f = decimal(e ** 10)
+const g = decimal(f % 2)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { Decimal as _Decimal } from 'decimal.js-light';
+
+
+const a = _Decimal('1');
+const c = _Decimal(b).sub('3');
+const d = _Decimal(c).mul('4');
+const e = _Decimal(d).div('5');
+const f = _Decimal(e).pow('10');
+const g = _Decimal(f).mod('2');
+"
+`;
+
+exports[`macros 3. macros: 3. macros 1`] = `
+"
+import decimal from '../src/macro'
+
+const a = decimal(1)
+const b = decimal(a - 3 * 4 / 5)
+const c = decimal(a - 3 + 4 - 5)
+const d = decimal(1 ** 2 ** 3)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { Decimal as _Decimal } from 'decimal.js-light';
+
+
+const a = _Decimal('1');
+const b = _Decimal(a).sub(_Decimal(_Decimal('3').mul('4')).div('5'));
+const c = _Decimal(_Decimal(_Decimal(a).sub('3')).add('4')).sub('5');
+const d = _Decimal('1').pow(_Decimal('2').pow('3'));
+"
+`;
+
+exports[`macros 4. macros: 4. macros 1`] = `
+"
+import decimal from '../src/macro'
+
+const a = decimal((1 + 2) * (3 - 4))
+const b = decimal(((1 + 2)))
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { Decimal as _Decimal } from 'decimal.js-light';
+
+
+const a = _Decimal(_Decimal('1').add('2')).mul(_Decimal('3').sub('4'));
+const b = _Decimal('1').add('2');
+"
+`;
+
+exports[`macros 5. macros: 5. macros 1`] = `
+"
+import decimal from '../src/macro'
+import Decimal from 'Decimal'
+import _Decimal from '_Decimal'
+
+const a = decimal(1)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { Decimal as _Decimal2 } from 'decimal.js-light';
+
+import Decimal from 'Decimal';
+import _Decimal from '_Decimal';
+
+const a = _Decimal2('1');
+"
+`;
